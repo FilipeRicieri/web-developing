@@ -1,0 +1,52 @@
+body{
+    background-color: hsl(212, 45%, 89%);
+    font-family: 'Outfit';
+    justify-content: center;
+    
+}
+.code{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    
+    
+}
+.white-box .code-qr{
+    
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.white-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    background-color: hsl(0, 0%, 100%) ;
+    display: flex;
+    width: 400px;
+    height: 700px;
+    flex-wrap: wrap;
+    margin-left: top;
+    margin-right: right;
+}
+
+
+.first-text{
+    font-size: 22px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.second-text{
+    font-size: 12px;
+    text-align: center;  
+    display: flex;
+    flex-wrap: wrap;
+}

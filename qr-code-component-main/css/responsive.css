@@ -1,0 +1,6 @@
+@media(max-width: 1120){
+    .white-box{
+        max-width: 375px;
+        max-height: min-content;
+    }
+}

@@ -1,13 +1,37 @@
 body{
-    background: url(./arquivos-necessarios-projeto-anna-bella/fundo.png);
+
+    background: #d2d2c1 url(./arquivos-necessarios-projeto-anna-bella/fundo.png);
+    font: 16px Arial, Helvetica, sans-serif;
 }
 
-.direitos{
-    text-align: center;
-    font-weight: bolder;
+#principal{
+
+    width: 900px;
+
+
 }
-.menu{
-    color:midnightblue;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bolder;
+#menu{
+    background: #c5c5b2;
+    padding: 18px;
+    
+}
+a{
+    color: #4b566a ;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+}
+#conteudo{
+    background: #e8e8d9;
+    padding: 10px;
+}
+h1{
+    color: #828271;
+    font-size: 1.2em; /*vai se ajustar ao tamanho definido no container bay, no caso o body*/
+}
+#rodape{
+    text-align: center;
+}
+.img-campanha{
+    border: 10px solid #c3c3ae;
 }

@@ -1,0 +1,19 @@
+/* geral */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    color: #323232;
+    border: none;
+}
+
+body{
+    background-image: url(./images/background.jpg) ;
+    background-size: cover;
+    
+} 
+textarea:focus, input:focus{
+    outline: none;
+}

@@ -17,3 +17,33 @@ body{
 textarea:focus, input:focus{
     outline: none;
 }
+
+a {
+    font: .8rem;
+}
+
+a:hover{
+    color: blue; 
+}
+
+#login-container{
+    background-color: #FFF;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    margin-top: 10vh;
+    border-radius: 10px;
+    text-align: center;
+} 
+
+/*formulário*/
+
+form{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+label, input{
+    display: block;
+}

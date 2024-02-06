@@ -144,6 +144,12 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+    
+}
+
+.pagination button:hover {
+    background-color: powderblue;
+    transition: background-color 0.5s;
 }
 
 @media screen and (min-width: 380px) {

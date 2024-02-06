@@ -1,0 +1,48 @@
+para montar  Requisição HTTP
+
+URL: https://pokeapi.co/api/v2/pokemon?type=grass&name=i
+    ${IP}${path = caminho de identificação do recurso}${query string após o ponto de interrogação, são parametros de busca, chave e valor}
+
+    IP = dominio = dns =( https://pokeapi.co
+                        http://127.0.0.1:8080)
+
+    recursos solicitados = api/v2/pokemon
+
+    //tipo de solicitação tambem é importante = REQUEST METHOD = GET | POST | PUT | DELETE | PATCH e cada tipo representa alguma algo para o servidor
+    get é para buscar recursos//GET não tem body
+
+    post = inserir um novo recurso na api
+    put = atualizar o pokemon
+    delete = delete 
+
+    REQUEST HEADERS
+
+    HEADERS são meta dados para descrever ou complementar nossa requisição
+    nós fazemos no js os headers que fazem sentido pra nós, ou seja que são necessário para o funcionamento do nosso programa, são uma especie de "configuração", para que possamos enviar e receber coisas do servidor;
+    Authorization: Bearer
+    Request Headers
+        content-type: application/json  //e no body vai o JSON
+
+
+
+    RESPONSE HEADERS
+     Confuguração 
+     accept-language:
+     pt-BR
+     pt;q=0.9  //0.são as prioridades de consideração do server
+     en;q=0.7
+     gl;q=0.6
+
+
+Request Body
+{
+    "name": "Teste"
+}
+
+//status code é uma resposta do servidor, é um numero que volta e esse numero indica oque aconteceu com a requisição
+STATUS CODE: 200 OK
+
+
+
+    <script src="/assets/js/pokemon-model.js"></script>
+    <script src="/assets/js/poke-api.js"></script>

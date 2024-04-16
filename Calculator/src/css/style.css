@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    border: solid 5px black;
+    height: 100vh;
+    background-image: linear-gradient(45deg,red , blue);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculator{
+    color: #fff;
+    position: absolute;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.btn{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    margin: 3px;
+    cursor: pointer;
+    background-color: rgb(31,31,31);
+    border: none;
+    color: #fff
+}
+.btn:hover{
+    background-color: black;
+}

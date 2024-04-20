@@ -7,9 +7,15 @@
 body{
     min-height: 100vh;
     background: #0c192c;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+.top{
+    padding: 5px;
+    text-align: center;
+    height: 30px;
+    color: white;
+    background-color:#193663;
+}
 .container{
     position: relative;
     width: 100%;
@@ -23,16 +29,30 @@ body{
 .bolhas span{
     width: 30px;
     height: 30px;
-    background: #e5ff00;
+    background: #6428f0;
     margin: 0 4px;
     border-radius: 50%;
-    box-shadow: 0 0 0 10px #e5ff0044,
-    0 0 0 50px #e5ff00,
-    0 0 0 100x #e5ff00;
+    box-shadow: 0 0 0 10px  #4015a344,
+    0 0  10px  #1e0558,
+    0 0  10px  #1e0558;
+    animation: animar calc(120s / var(--i)) linear infinite;
+    
+}
+
+@keyframes animar {
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(1);
+    }
 }
 
 .bolhas span:nth-of-type(even){
-    background: #2dc3ff;;
+    background: #2521f1;
+    box-shadow: 0 0 0 10px  #2521f144,
+    0 0  10px  #2521f1,
+    0 0  10px  #2521ff;
 }
 
 .calculator{
@@ -44,7 +64,7 @@ body{
     transform: translate(-50%,-50%);
     border-radius: 15px;
     padding: 15px;
-    opacity: 80%;
+    opacity: 90%;
 }
 
 .btn{

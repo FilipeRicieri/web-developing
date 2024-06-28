@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <title>SBAR - UTI ADULTO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        textarea, input[type="text"], input[type="date"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>SBAR - UTI ADULTO</h1>
+        <hr>
+        <form id="sbarForm">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Data de internação:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="doctor">Nome do Médico:</label>
+                <input type="text" id="doctor" name="doctor" required>
+            </div>
+            <div class="form-group">
+                <label for="hd">HD:</label>
+                <textarea name="hd" id="hd" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="motivo">Motivo da internação:</label>
+                <textarea name="motivo" id="motivo" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="antecedentes">Antecedentes:</label>
+                <textarea name="antecedentes" id="antecedentes" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="medicacao-uso">Medicação em uso:</label>
+                <textarea name="medicacao-uso" id="medicacao-uso" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="intern-historic">Histórico Interno:</label>
+                <textarea name="intern-historic" id="intern-historic" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="fugulin">Fugulin:</label>
+                <select name="fugulin" id="fugulin" required>
+                    <option value="" disabled selected>Selecione uma das opções</option>
+                    <option value="Min">Min.</option>
+                    <option value="Int">Int.</option>
+                    <option value="AD">AD.</option>
+                    <option value="SI">SI</option>
+                    <option value="I">I</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rass">RASS:</label>
+                <input type="text" id="rass" name="rass">
+            </div>
+            <div class="form-group">
+                <label for="queda">Queda:</label>
+                <input type="text" id="queda" name="queda">
+            </div>
+            <div class="form-group">
+                <label for="braden">Braden:</label>
+                <input type="text" id="braden" name="braden">
+            </div>
+            <div class="form-group">
+                <label for="glasgow">Glasgow:</label>
+                <input type="text" id="glasgow" name="glasgow">
+            </div>
+            <div class="form-group">
+                <label for="vulnerability">Vulnerabilidade:</label>
+                <input type="text" id="vulnerability" name="vulnerability">
+            </div>
+            <div class="form-group">
+                <label for="bronco">Broncoaspiração:</label>
+                <input type="text" id="bronco" name="bronco">
+            </div>
+            <div class="form-group">
+                <label for="oxygen">Oxigênio:</label>
+                <input type="text" id="oxygen" name="oxygen">
+            </div>
+            <div class="form-group">
+                <label>Isolamento:</label><br>
+                <input type="radio" id="cont" name="isolamento" value="cont">
+                <label for="cont">Cont.</label>
+                <input type="radio" id="aeross" name="isolamento" value="aeross">
+                <label for="aeross">Aeross.</label>
+                <input type="radio" id="got" name="isolamento" value="got">
+                <label for="got">Got.</label>
+            </div>
+            <hr>
+            <div class="form-group">
+                <h1>Dispositivos</h1>
+                <hr>
+                <label for="cvc">CVC:</label>
+                <input type="text" id="cvc" name="cvc">
+            </div>
+            <div class="form-group">
+                <label for="avp">AVP:</label>
+                <input type="text" id="avp" name="avp">
+            </div>
+            <div class="form-group">
+                <label for="cvd">CVD:</label>
+                <input type="text" id="cvd" name="cvd">
+            </div>
+            <div class="form-group">
+                <label>SNE:</label><br>
+                <input type="radio" id="nd" name="sne" value="nd">
+                <label for="nd">ND</label>
+                <input type="radio" id="ne" name="sne" value="ne">
+                <label for="ne">NE(</label>
+                <input type="text" id="ne-text" name="ne">
+                <label for="ne-text">)</label>
+                <label for="others">Outros:</label>
+                <textarea name="others" id="others" rows="2"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="skin">Pele:</label><br>
+                <input type="radio" id="integra" name="skin" value="integra">
+                <label for="integra">Integra</label>
+                <input type="radio" id="ulcera" name="skin" value="ulcera">
+                <label for="ulcera">Úlcera</label>
+                <label for="region">Região:</label>
+                <input type="text" id="region" name="region">
+            </div>
+            <div class="form-group">
+                <label for="intercorrence">Intercorrências:</label>
+                <textarea name="intercorrence" id="intercorrence" rows="4"></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <script src="salvarpdf.js"></script>
+</body>
+</html>

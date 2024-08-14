@@ -1,0 +1,37 @@
+/*Herança e especificidade*/
+
+/*no caso de dois seletores iguais, o último sera oque vai valer, sempre será a ultima regra que será aplicada
+.pagina p {
+    color: blue !important;
+}
+.pagina p{
+color: red ;
+}
+*******************No entanto se você utilizar o elemento !important, a regra que será aplicada n sera aque tiver important, pois ele indica que esse eelemnto é mais importante que os outro
+
+
+*Se um seletor for mais especíico que o outro a regra mais específica sera aplicada(terá precedência sobre regras mais gerais) Exemplo:
+*{
+color: red;
+}
+
+h2{
+color: blue;                 
+}
+
+Neste caso a cor azul será aplicada, pois a regra mais especíca
+
+h2.verde{
+color: green;
+}
+E neste caso oque será definido sera a cor verde, pois é ainda mais especico
+
+h2#amarelo{
+color: yellow;
+}
+h2.verde{
+color: green;
+}
+
+E neste caso a cor amarela será aplicada, pois o seletor ID é ainda mais específico
+*/

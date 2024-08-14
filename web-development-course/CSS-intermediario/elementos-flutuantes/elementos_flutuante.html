@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+    .conteudo{
+        background:purple;
+        border: 1px solid grey;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        float: left; /*float faz com que os elementos flutuem para a direita ou para a esquerda*/
+        /* contudo, para que os demais elementos flutuem a esquerda por exemplo, não pode haver conflito de tamanhos*/
+    }
+     /* .conteudo1{
+        background:blue;
+        border: 1px solid grey;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+         float: left;
+    }  */
+      .clear{
+        clear: left; /*limpa o fluxo flutuante do float*/
+      }
+      #principal{
+        border: 1px solid red;
+        background: green;
+      }
+
+    </style>
+</head>
+<body>
+    <div id="principal">
+                        
+        <div class="conteudo">
+            conteúdo 1
+        </div>
+
+        <div class="conteudo">
+            conteúdo 2
+        </div>
+
+        <div class="conteudo">
+            conteúdo 3
+        </div>
+
+     
+
+        <div class="clear"></div> <!-- precisa dessa div com o atributo clear para os elementos flutuantes ficarem dentro da div principal, para limpar o fluxo flutuante -->
+        <!-- elementos flutuantes não empurram, ou expandem o container pai para caber dentro, somente com o clear conseguimos esse resultado -->
+ 
+    </div>
+    
+</body>
+</html>

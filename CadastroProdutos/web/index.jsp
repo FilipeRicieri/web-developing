@@ -53,20 +53,7 @@
     
     
     
-    <%
-        Connection conexao = null;
-        try {
-            conexao = CadProdDbManager.obterConexao();
-            if (conexao != null) {
-                out.println("<h1 class='bg-success'>banco ok</h1>");
-            }
-        } catch (SQLException e) {
-            out.println("<p>Erro no banco: " + e.getMessage() + "</p>");
-        } finally {
-           conexao.close();
-        }
-    %>
-    
+
 </body>
 
 </html>

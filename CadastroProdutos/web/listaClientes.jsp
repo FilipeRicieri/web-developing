@@ -32,14 +32,15 @@
                         <!-- Botão Alterar -->
                         <form action="alterarCliente.jsp" method="GET" style="display:inline;">
                             <input type="hidden" name="id" value="${cliente.id}">
-                            <button class="btn btn-info" type="submit">Alterar</button>
+                            <a href="cliente?action=editar&id=${cliente.id}" class="btn btn-warning">Alterar</a>
+
                         </form>
 
                         <!-- Formulário para exclusão -->
                         <form action="cliente" method="POST" style="display:inline;">
                             <input type="hidden" name="id" value="${cliente.id}">
                             <input type="hidden" name="_method" value="DELETE"> <!-- Identificador para exclusão -->
-                            <button class="btn btn-dark" type="submit" onclick="return confirm('Tem certeza que deseja excluir este cliente?');">Excluir</button>
+                           <a href="cliente?action=editar&id=$cliente.id}"> <button class="btn btn-dark" type="submit" onclick="return confirm('Tem certeza que deseja excluir este cliente?');">Excluir</button>
                         </form>
                     </td>
                 </tr>
